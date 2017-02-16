@@ -7,26 +7,53 @@
             background-image: url("blue-sky-clouds-background.jpg");
             background-color: #CCFFFF;
         }
-        .comp {
+        td:nth-child(3) {
             font-family: monospace;
-            font-size: 12px;
+            font-size: 14px;
+            font-weight: bold;
         }
         
-        span {
-            font-family: cursive;
-            font-weight: 900;
+        #raised:hover{
+            vertical-align:super;
+            color:white;
         }
         
+        img {
+            display: block;
+        }
+        
+        table{
+            border-collapse: collapse;
+        }
+        
+        td, th{
+            border: 2px solid #123456;
+        }
+        
+        td:first-of-type{
+            font-size:20px;
+            font-family:monospace;
+        }
+
+        
+        .desc{
+            text-align: center;
+        }
+        
+        a:visited{
+            
+            color: green;
+        }
         /*At minimum use the following CSS concepts in your updated page:
             CSS Properties
-                background-image
-                font-size
-                font-weight
-                font-family
-                display
-                border
-                vertical-align
-                text-align
+                Xbackground-image
+                Xfont-size
+                Xfont-weight
+                Xfont-family
+                Xdisplay
+                Xborder
+                Xvertical-align
+                Xtext-align
             CSS Selectors
                 :hover
                 :visited
@@ -36,11 +63,11 @@
     </style>
 </head>
 <body>
-    <h1>The Unix <span>Cheat Sheet</span></h1>
+    <h1>The Unix Cheat Sheet</h1>
     <p>Welcome to my website! Here, you will learn
-    some <span>interesting</span> things you can do on the command line.</p>
-    <h2>Some useful commands</h2>
-    <table border>
+    some <span>interesting</span> things you can do on the <span class="comp">command line</span>.</p>
+    <h2>Some <span id="raised">useful</span> commands</h2>
+    <table>
         <tr>
             <th>Command</th>
             <th>Description</th>
@@ -48,23 +75,23 @@
         </tr>
         <tr>
             <td class="comp">ls</td>
-            <td>"List"; shows a list of files and directories in your working directory.</td>
+            <td class="desc">"List"; shows a list of files and directories in your working directory.</td>
             <td class="comp"><pre>username:~/workspace $ ls
 2048.py/  B-2.jpeg  UnixCheatSheet/  sandbox/</pre></td>
         </tr>
         <tr>
             <td class="comp">cd</td>
-            <td>"Change Directory"; allows you to move to a different directory.</td>
+            <td class="desc">"Change Directory"; allows you to move to a different directory.</td>
             <td class="comp">username:~/workspace $ cd UnixCheatSheet/</td>
         </tr>
         <tr>
             <td class="comp">man</td>
-            <td>Opens the "manual" for the command you tell it</td>
+            <td class="desc">Opens the "manual" for the command you tell it</td>
             <td class="comp">username:~/workspace $ man wget</td>
         </tr>
         <tr>
             <td class="comp">wget</td>
-            <td>Give this command a URL and it downloads the file found there</td>
+            <td class="desc">Give this command a URL and it downloads the file found there</td>
             <td class="comp">username:~/workspace $ wget http://www.airforce-technology.com/uploads/newsarticle/1000388/images/201017/large/3-f-22-raptor.jpg</td>
         </tr>
     </table>
